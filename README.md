@@ -69,7 +69,7 @@ I successfully created a well-structured GitHub portfolio that is easy to read a
 
 ## 🎥 4. Mock Interview Video
 
-[▶️ Watch My Mock Interview](https://your-video-link.com)
+[▶️ Watch My Mock Interview](https://youtube.com/shorts/YuyVbX3Y4to?feature=share)
 
 
 
