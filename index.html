@@ -5,6 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tlangelani Chauke | IT Portfolio</title>
 <style>
+:root {
+--navy: #0c1733;
+--blue: #2563eb;
+--purple: #8057e7;
+--light: #f3f6ff;
+--text: #23304b;
+}
 {
 box-sizing: border-box;
 }
@@ -13,285 +20,324 @@ scroll-behavior: smooth;
 }
 body {
 margin: 0;
-font-family: Arial, sans-serif;
-background: #f3f5fb;
-color: #263249;
+font-family: "Segoe UI", Arial, sans-serif;
+background: var(--light);
+color: var(--text);
 line-height: 1.7;
 }
 header {
-background: linear-gradient(135deg, #101b38, #3457a3);
+background: linear-gradient(
+120deg, #0c1733, #204b9c, #6847ad
+);
 color: white;
 text-align: center;
-padding: 65px 20px;
-}
-header h1 {
-font-size: 38px;
-margin-bottom: 8px;
-}
-header p {
-margin: 5px;
-color: #e0e8fa;
+padding: 85px 20px 75px;
 }
 .profile {
-width: 140px;
-height: 140px;
+width: 145px;
+height: 145px;
 border-radius: 50%;
 object-fit: cover;
-border: 4px solid white;
-box-shadow: 0 8px 25px #00000040;
+border: 5px solid white;
+box-shadow: 0 12px 35px #0005;
+}
+.eyebrow {
+color: #d6c6ff;
+text-transform: uppercase;
+letter-spacing: 3px;
+font-size: 12px;
+font-weight: 700;
+}
+header h1 {
+font-size: clamp(34px, 5vw, 55px);
+margin: 10px 0;
+}
+header p {
+margin: 6px;
+}
+.hero-actions {
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+gap: 12px;
+margin-top: 26px;
+}
+.btn, button {
+display: inline-block;
+background: var(--blue);
+color: white;
+border: 0;
+border-radius: 10px;
+padding: 12px 19px;
+font: inherit;
+font-size: 14px;
+font-weight: 700;
+text-decoration: none;
+cursor: pointer;
+transition: .2s ease;
+}
+.btn:hover, button:hover {
+background: #1747b3;
+transform: translateY(-2px);
+}
+.btn-light {
+background: white;
+color: #17366c;
+}
+.btn-light:hover {
+background: #e8eeff;
 }
 nav {
-background: #101b34;
-padding: 15px;
-text-align: center;
 position: sticky;
 top: 0;
-z-index: 10;
+z-index: 20;
+background: #0c1733;
+text-align: center;
+padding: 14px 8px;
+box-shadow: 0 4px 15px #0002;
 }
 nav a {
-color: white;
+color: #eef3ff;
 text-decoration: none;
-margin: 8px;
-font-size: 14px;
-font-weight: bold;
+font-weight: 600;
+font-size: 13px;
 display: inline-block;
+margin: 5px 9px;
 }
 nav a:hover {
-color: #c4b5fd;
+color: #c5aaff;
 }
 main {
 max-width: 1100px;
 margin: auto;
-padding: 25px 18px;
+padding: 18px;
 }
 section {
 background: white;
-margin: 28px 0;
-padding: 30px;
-border-radius: 16px;
-box-shadow: 0 5px 20px #0000000c;
-scroll-margin-top: 90px;
+margin: 30px 0;
+padding: 35px;
+border-radius: 20px;
+box-shadow: 0 8px 30px #172a5410;
+scroll-margin-top: 95px;
 }
 h2 {
-color: #244b91;
-font-size: 27px;
+color: #173c86;
+font-size: 28px;
 margin-top: 0;
 }
-.btn, button {
-display: inline-block;
-background: #244b91;
-color: white;
-border: none;
-border-radius: 8px;
-padding: 11px 16px;
-cursor: pointer;
-text-decoration: none;
-font-weight: bold;
-font-size: 14px;
-}
-.btn:hover, button:hover {
-background: #17356c;
-}
-/* SKILLS /
-.skills-list {
+.skills {
 display: flex;
 flex-wrap: wrap;
 gap: 10px;
 }
-.skills-list span {
-background: #eaf0ff;
-color: #244b91;
-padding: 9px 14px;
+.skills span {
+background: #e8efff;
+color: #2450a0;
+padding: 9px 15px;
 border-radius: 30px;
-font-weight: bold;
 font-size: 13px;
+font-weight: 700;
 }
-/* CAPACITI SECTION /
-#certifications {
-background: linear-gradient(135deg, #101b38, #263e75);
+/* CAPACITI /
+#capaciti {
+background: linear-gradient(
+130deg, #111d3e, #253e78
+);
 color: white;
-padding: 35px;
 }
-#certifications h2 {
+#capaciti h2 {
 color: white;
 }
 .capaciti-card {
-background: rgba(255,255,255,0.08);
-border: 1px solid rgba(255,255,255,0.18);
-border-radius: 18px;
-padding: 28px;
-}
-.capaciti-label {
-color: #c4b5fd;
-font-size: 12px;
-font-weight: bold;
-letter-spacing: 1.5px;
-text-transform: uppercase;
+border: 1px solid #ffffff35;
+background: #ffffff10;
+border-radius: 17px;
+padding: 26px;
 }
 .capaciti-card h3 {
-color: white;
+color: #e2d5ff;
 font-size: 25px;
-margin-bottom: 10px;
 }
-.capaciti-description {
-color: #dbe4f5;
+.capaciti-card p {
+color: #e1e9ff;
 }
-.capaciti-skills {
+.capaciti-tags {
 display: flex;
 flex-wrap: wrap;
 gap: 10px;
-margin: 20px 0;
 }
-.capaciti-skills span {
-background: rgba(167,139,250,0.18);
-color: #ede9fe;
-border: 1px solid #7565ad;
-padding: 8px 14px;
-border-radius: 25px;
+.capaciti-tags span {
+background: #7355c044;
+border: 1px solid #a58bff77;
+border-radius: 30px;
+padding: 8px 13px;
 font-size: 13px;
+color: #f0eaff;
 }
-.capaciti-certificate {
-background: rgba(0,0,0,0.2);
-border-radius: 14px;
-padding: 22px;
-margin: 24px 0;
-}
-.capaciti-certificate h4 {
-margin-top: 0;
-color: white;
-}
-.capaciti-button {
-display: inline-block;
-background: #a78bfa;
-color: #101b38;
-padding: 12px 20px;
-border-radius: 9px;
-text-decoration: none;
-font-weight: bold;
-margin-top: 10px;
-}
-.capaciti-button:hover {
-background: #ddd6fe;
-}
-/* PROJECT CARDS /
-.projects {
+/* PROJECTS /
+.project-grid {
 display: grid;
-grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+grid-template-columns: repeat(
+auto-fit, minmax(225px, 1fr)
+);
 gap: 18px;
 }
 .project-card {
-background: #f4f6fc;
-padding: 22px;
-border-radius: 13px;
-border: 1px solid #e0e6f1;
+background: linear-gradient(
+135deg, #1748a5, #346fe2
+);
+border-radius: 16px;
+padding: 25px;
+color: white;
+min-height: 195px;
+cursor: pointer;
+transition: .25s ease;
+border: 1px solid #ffffff20;
+text-align: left;
+}
+.project-card:hover {
+transform: translateY(-6px);
+box-shadow: 0 14px 25px #1b49a344;
 }
 .project-card h3 {
-color: #244b91;
-margin-top: 0;
+margin: 10px 0;
+font-size: 19px;
+color: white;
 }
-.project-card a {
-color: #244b91;
-font-weight: bold;
+.project-card p {
+color: #e2edff;
+font-size: 13px;
 }
-/* AGILE PORTFOLIO TABLE /
-.table-wrapper {
+.project-card .arrow {
+display: inline-block;
+margin-top: 10px;
+font-weight: 700;
+color: white;
+}
+/* AGILE TABLE /
+.table-wrap {
 overflow-x: auto;
 }
 table {
 width: 100%;
 border-collapse: collapse;
-margin-top: 20px;
-}
-th, td {
-border: 1px solid #dce2ec;
-padding: 14px;
-text-align: left;
+margin-top: 22px;
 }
 th {
-background: #244b91;
+background: #173c86;
 color: white;
+padding: 15px;
+text-align: left;
+}
+td {
+padding: 15px;
+border-bottom: 1px solid #e2e8f5;
 }
 tr:nth-child(even) {
-background: #f3f6fc;
+background: #f1f5ff;
 }
-iframe {
-width: 100%;
-height: 650px;
-border: 1px solid #dce2ec;
-border-radius: 9px;
-background: white;
+.doc-btn {
+background: #2563eb;
+white-space: nowrap;
 }
-#viewer[hidden] {
+#document-viewer[hidden],
+#project-details[hidden] {
 display: none;
 }
-footer {
-background: #101b34;
+#document-frame {
+width: 100%;
+height: 650px;
+border: 1px solid #d7e0f0;
+border-radius: 12px;
+margin-top: 20px;
+}
+.detail-panel {
+background: #edf3ff;
+border-left: 5px solid #2563eb;
+padding: 20px;
+border-radius: 12px;
+margin-top: 20px;
+}
+/* CONTACT /
+.contact-grid {
+display: grid;
+grid-template-columns: repeat(
+auto-fit, minmax(200px, 1fr)
+);
+gap: 15px;
+}
+.contact-link {
+display: block;
+background: #2058c2;
 color: white;
-text-align: center;
 padding: 25px;
+text-align: center;
+border-radius: 14px;
+text-decoration: none;
+font-size: 18px;
+font-weight: bold;
+transition: .2s;
+}
+.contact-link:hover {
+background: #123b8a;
+transform: translateY(-3px);
+}
+.contact-link.github {
+background: #17223c;
+}
+.contact-link.github:hover {
+background: #33456e;
+}
+.contact-link.pending {
+background: #dbe5f8;
+color: #34496c;
+cursor: default;
+}
+footer {
+background: #0c1733;
+color: #d5e0f8;
+text-align: center;
+padding: 28px;
 }
 @media (max-width: 600px) {
-header h1 {
-font-size: 29px;
+header {
+padding: 60px 15px;
 }
-section, #certifications {
-padding: 20px;
+section {
+padding: 22px;
 }
 .capaciti-card {
 padding: 18px;
 }
-.capaciti-card h3 {
-font-size: 21px;
-}
-th, td {
-padding: 9px;
+td, th {
+padding: 10px;
 font-size: 13px;
 }
-iframe {
-height: 450px;
+#document-frame {
+height: 470px;
 }
 }
 </style>
 </head>
 <body>
-<!-- HOME -->
 <header id="home">
 <img
 src="images/profile.jpg"
-alt="Tlangelani Chauke profile picture"
 class="profile"
+alt="Profile photo"
 onerror="this.style.display='none'"
 >
+<p class="eyebrow">
+Welcome to my digital portfolio
+</p>
 <h1>Tlangelani Chauke</h1>
 <p>ICT Application Development Student</p>
 <p>Cape Peninsula University of Technology</p>
 <p>Aspiring Software Developer</p>
-</header>
-<!-- NAVIGATION -->
-<nav>
-<a href="#home">Home</a>
-<a href="#about">About Me</a>
-<a href="#skills">Skills</a>
-<a href="#certifications">Certifications</a>
-<a href="#projects">IT Projects</a>
-<a href="#agile">Agile Portfolio</a>
-<a href="#contact">Contact</a>
-</nav>
-<main>
-<!-- ABOUT ME -->
-<section id="about">
-<h2>About Me</h2>
-<p>
-I am a final-year Diploma in ICT student
-specialising in Application Development
-at Cape Peninsula University of Technology.
-I am passionate about software development,
-web applications and solving real-world
-problems through technology.
-I enjoy learning new technologies and
-building practical solutions that can
-make a positive difference.
-</p>
+<div class="hero-actions">
+<a href="#projects" class="btn btn-light">
+Explore My Projects
+</a>
 <a
 href="TLANGELANI%20CHAUKE-CV.pdf"
 class="btn"
@@ -300,11 +346,37 @@ rel="noopener"
 >
 View My CV
 </a>
+</div>
+</header>
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#capaciti">CAPACITI</a>
+<a href="#projects">Projects</a>
+<a href="#agile">Agile Project</a>
+<a href="#contact">Contact</a>
+</nav>
+<main>
+<section id="about">
+<h2>About Me</h2>
+<p>
+I am a final-year Diploma in ICT student
+specialising in Application Development
+at Cape Peninsula University of Technology.
+</p>
+<p>
+I am passionate about building user-friendly
+web applications, solving real-world problems
+and continuously improving my technical skills.
+My academic projects have given me practical
+experience in frontend development,
+backend technologies and teamwork.
+</p>
 </section>
-<!-- TECHNICAL SKILLS -->
 <section id="skills">
 <h2>Technical Skills</h2>
-<div class="skills-list">
+<div class="skills">
 <span>HTML</span>
 <span>CSS</span>
 <span>JavaScript</span>
@@ -319,173 +391,188 @@ View My CV
 <span>Trello</span>
 </div>
 </section>
-<!-- CAPACITI PROFESSIONAL DEVELOPMENT -->
-<section id="certifications">
-<h2>🎓 Certifications & Professional Development</h2>
+<section id="capaciti">
+<h2>Professional Development</h2>
 <div class="capaciti-card">
-<p class="capaciti-label">
-Professional Development • July 2026
-</p>
-<h3>🚀 CAPACITI AI Skills Acceleration Programme</h3>
-<p class="capaciti-description">
-I successfully completed a one-week AI Skills
-Acceleration Programme through CAPACITI.
-The programme strengthened my understanding
-of artificial intelligence, generative AI,
-prompt engineering and responsible use
-of AI technologies.
-</p>
-<h4>Skills & Knowledge Gained</h4>
-<div class="capaciti-skills">
-<span>🤖 Artificial Intelligence</span>
-<span>✨ Generative AI</span>
-<span>💡 Prompt Engineering</span>
-<span>🛡️ Responsible AI</span>
-<span>💻 Digital Skills</span>
-<span>🧠 Problem Solving</span>
-</div>
-<div class="capaciti-certificate">
-<h4>🏆 Google AI Certificate</h4>
+<p class="eyebrow">July 2026</p>
+<h3>
+🚀 CAPACITI AI Skills Acceleration Programme
+</h3>
 <p>
-I completed a Google AI learning course
-during the CAPACITI programme,
-expanding my knowledge of AI tools
-and their practical applications.
+I completed a one-week AI Skills Acceleration
+Programme through CAPACITI, where I developed
+my knowledge of artificial intelligence and
+its applications in the workplace.
 </p>
-<a
-href="certificates/google-ai-certificate.pdf"
-class="capaciti-button"
-target="_blank"
-rel="noopener"
->
-📄 View My Certificate
-</a>
+<h4>Skills & Knowledge</h4>
+<div class="capaciti-tags">
+<span>Artificial Intelligence</span>
+<span>Generative AI</span>
+<span>Prompt Engineering</span>
+<span>Responsible AI</span>
+<span>Digital Skills</span>
+<span>Problem Solving</span>
 </div>
-<h4>My Learning Reflection</h4>
-<p class="capaciti-description">
-Participating in the CAPACITI programme
-helped me understand how artificial
-intelligence can support productivity,
-learning and software development.
-It motivated me to continue developing
-my technical skills and exploring
-emerging technologies as an aspiring
-software developer.
+<h4>Google AI Learning</h4>
+<p>
+During the programme, I also completed
+a Google AI learning course.
+</p>
+<h4>My Reflection</h4>
+<p>
+The experience strengthened my interest
+in emerging technologies and helped me
+understand how AI can support learning,
+productivity and software development.
 </p>
 </div>
 </section>
-<!-- IT PROJECTS -->
+<!-- PROJECTS -->
 <section id="projects">
-<h2>My IT Projects</h2>
-<div class="projects">
-<div class="project-card">
+<h2>Projects</h2>
+<div class="project-grid">
+<button
+class="project-card"
+onclick="showProject('igugulam')"
+>
+<div>🎓</div>
 <h3>iGugulam Community Program</h3>
-<p>
-Educational support website developed
-using HTML, CSS, JavaScript and
-Java Spring Boot.
-</p>
-<p>
-My contributions included the Dashboard,
-Homework, Announcements and Manage
-Announcements interfaces.
-</p>
-<a href="#agile">View Agile Portfolio</a>
-</div>
-<div class="project-card">
+<p>Educational support web application</p>
+<span class="arrow">View Project →</span>
+</button>
+<button
+class="project-card"
+onclick="showProject('essence')"
+>
+<div>🛍️</div>
 <h3>Essence of the Middle East</h3>
-<p>
-E-commerce application developed using
-PHP and Laravel.
-</p>
-<p>
-My contribution focused on the
-Shopping Bag and Checkout subsystem.
-</p>
-</div>
-<div class="project-card">
+<p>Laravel e-commerce application</p>
+<span class="arrow">View Project →</span>
+</button>
+<button
+class="project-card"
+onclick="showProject('unires')"
+>
+<div>📍</div>
 <h3>UniResApp</h3>
-<p>
-Student accommodation application.
-</p>
-<p>
-My contribution focused on the
-Maps and Navigation feature.
-</p>
-</div>
-<div class="project-card">
+<p>Student accommodation application</p>
+<span class="arrow">View Project →</span>
+</button>
+<button
+class="project-card"
+onclick="showProject('capeconnect')"
+>
+<div>💻</div>
 <h3>CapeConnect AI</h3>
-<p>
-An IT project included in my
-application development experience.
-</p>
+<p>Application development project</p>
+<span class="arrow">View Project →</span>
+</button>
 </div>
+<div
+id="project-details"
+class="detail-panel"
+hidden
+>
+<h3 id="project-title"></h3>
+<p id="project-description"></p>
+<button onclick="closeProject()">
+Close Project Details
+</button>
 </div>
 </section>
-<!-- AGILE PROJECT PORTFOLIO -->
+<!-- AGILE PROJECT -->
 <section id="agile">
-<h2>📚 PRP Agile Project Portfolio</h2>
+<h2>Agile Project</h2>
 <p>
 <strong>Project:</strong>
 iGugulam Community Program
 </p>
 <p>
 This section contains my Agile project
-documentation, supporting evidence
-and individual reflections.
+documentation, evidence and reflections.
 </p>
-<div class="table-wrapper">
+<div class="table-wrap">
 <table>
 <thead>
 <tr>
 <th>No.</th>
-<th>Agile Assessment Section</th>
+<th>Agile Document</th>
 <th>Action</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>1</td>
+<td>01</td>
 <td>Agile Project Charter</td>
 <td>
-<button onclick="showDocument('agile-project-charter.pdf', 'Agile Project Charter')">
-View Document
+<button
+class="doc-btn"
+onclick="showDocument(
+'agile-project-charter.pdf',
+'Agile Project Charter'
+)"
+>
+View
 </button>
 </td>
 </tr>
 <tr>
-<td>2</td>
+<td>02</td>
 <td>User Stories and Tasks</td>
 <td>
-<button onclick="showDocument('user-stories-and-tasks.pdf', 'User Stories and Tasks')">
-View Document
+<button
+class="doc-btn"
+onclick="showDocument(
+'user-stories-and-tasks.pdf',
+'User Stories and Tasks'
+)"
+>
+View
 </button>
 </td>
 </tr>
 <tr>
-<td>3</td>
+<td>03</td>
 <td>Product Backlog</td>
 <td>
-<button onclick="showDocument('product-backlog.pdf', 'Product Backlog')">
-View Document
+<button
+class="doc-btn"
+onclick="showDocument(
+'product-backlog.pdf',
+'Product Backlog'
+)"
+>
+View
 </button>
 </td>
 </tr>
 <tr>
-<td>4</td>
+<td>04</td>
 <td>Sprint Backlog</td>
 <td>
-<button onclick="showDocument('sprint-backlog.pdf', 'Sprint Backlog')">
-View Document
+<button
+class="doc-btn"
+onclick="showDocument(
+'sprint-backlog.pdf',
+'Sprint Backlog'
+)"
+>
+View
 </button>
 </td>
 </tr>
 <tr>
-<td>5</td>
+<td>05</td>
 <td>Agile Logbook</td>
 <td>
-<button onclick="showDocument('agile-logbook.pdf', 'Agile Logbook')">
-View Document
+<button
+class="doc-btn"
+onclick="showDocument(
+'agile-logbook.pdf',
+'Agile Logbook'
+)"
+>
+View
 </button>
 </td>
 </tr>
@@ -494,56 +581,125 @@ View Document
 </div>
 </section>
 <!-- DOCUMENT VIEWER -->
-<section id="viewer" hidden>
-<h2 id="document-title">Document Viewer</h2>
-<p>
+<section id="document-viewer" hidden>
+<h2 id="document-title">
+Agile Document
+</h2>
 <button onclick="closeDocument()">
-← Back to Agile Portfolio
+← Back to Agile Project
 </button>
-</p>
 <iframe
 id="document-frame"
-title="Agile portfolio document"
+title="Agile document viewer"
 ></iframe>
 </section>
 <!-- CONTACT -->
 <section id="contact">
 <h2>Contact & Professional Links</h2>
-<p>
+<div class="contact-grid">
+<div class="contact-link pending">
+in · LinkedIn
+<div
+style="font-size:12px;font-weight:normal"
+>
+Profile link coming soon
+</div>
+</div>
 <a
+class="contact-link github"
 href="https://github.com/Tlangelani23"
 target="_blank"
 rel="noopener"
 >
-Visit My GitHub Profile
+GitHub
+<div
+style="font-size:12px;font-weight:normal"
+>
+View My Repositories
+</div>
 </a>
-</p>
+</div>
 </section>
 </main>
 <footer>
-<p>
-&copy; 2026 Tlangelani Chauke |
-IT Portfolio
-</p>
+© 2026 Tlangelani Chauke |
+Software Development Portfolio
 </footer>
 <script>
+const projects = {
+igugulam: {
+title: "iGugulam Community Program",
+description:
+"I worked on the Dashboard, Homework, " +
+"Announcements and Manage Announcements " +
+"interfaces using HTML, CSS and JavaScript. " +
+"I also contributed to Java Spring Boot " +
+"backend development activities."
+},
+essence: {
+title: "Essence of the Middle East",
+description:
+"An e-commerce project developed using " +
+"PHP and Laravel. My individual subsystem " +
+"focused on Shopping Bag and Checkout."
+},
+unires: {
+title: "UniResApp",
+description:
+"A student accommodation application. " +
+"My contribution focused on the Maps " +
+"and Navigation feature."
+},
+capeconnect: {
+title: "CapeConnect AI",
+description:
+"An application development project " +
+"included in my academic IT experience."
+}
+};
+function showProject(key) {
+const project = projects[key];
+if (!project) return;
+document.getElementById("project-title")
+.textContent = project.title;
+document.getElementById("project-description")
+.textContent = project.description;
+const panel =
+document.getElementById("project-details");
+panel.hidden = false;
+panel.scrollIntoView({
+behavior: "smooth"
+});
+}
+function closeProject() {
+document.getElementById("project-details")
+.hidden = true;
+document.getElementById("projects")
+.scrollIntoView({
+behavior: "smooth"
+});
+}
 function showDocument(filename, title) {
 document.getElementById("document-title")
 .textContent = title;
 document.getElementById("document-frame")
 .src = "documents/" + filename;
-document.getElementById("viewer")
-.hidden = false;
-document.getElementById("viewer")
-.scrollIntoView({ behavior: "smooth" });
+const viewer =
+document.getElementById("document-viewer");
+viewer.hidden = false;
+viewer.scrollIntoView({
+behavior: "smooth"
+});
 }
 function closeDocument() {
-document.getElementById("viewer")
+document.getElementById("document-viewer")
 .hidden = true;
 document.getElementById("document-frame")
 .src = "";
 document.getElementById("agile")
-.scrollIntoView({ behavior: "smooth" });
+.scrollIntoView({
+behavior: "smooth"
+});
 }
 </script>
 </body>
