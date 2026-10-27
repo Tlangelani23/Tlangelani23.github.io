@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tlangelani Chauke | IT Portfolio</title>
+<style>
+{
+box-sizing: border-box;
+}
+html {
+scroll-behavior: smooth;
+}
+body {
+margin: 0;
+font-family: Arial, sans-serif;
+background: #f3f5fb;
+color: #263249;
+line-height: 1.7;
+}
+header {
+background: linear-gradient(135deg, #101b38, #3457a3);
+color: white;
+text-align: center;
+padding: 65px 20px;
+}
+header h1 {
+font-size: 38px;
+margin-bottom: 8px;
+}
+header p {
+margin: 5px;
+color: #e0e8fa;
+}
+.profile {
+width: 140px;
+height: 140px;
+border-radius: 50%;
+object-fit: cover;
+border: 4px solid white;
+box-shadow: 0 8px 25px #00000040;
+}
+nav {
+background: #101b34;
+padding: 15px;
+text-align: center;
+position: sticky;
+top: 0;
+z-index: 10;
+}
+nav a {
+color: white;
+text-decoration: none;
+margin: 8px;
+font-size: 14px;
+font-weight: bold;
+display: inline-block;
+}
+nav a:hover {
+color: #c4b5fd;
+}
+main {
+max-width: 1100px;
+margin: auto;
+padding: 25px 18px;
+}
+section {
+background: white;
+margin: 28px 0;
+padding: 30px;
+border-radius: 16px;
+box-shadow: 0 5px 20px #0000000c;
+scroll-margin-top: 90px;
+}
+h2 {
+color: #244b91;
+font-size: 27px;
+margin-top: 0;
+}
+.btn, button {
+display: inline-block;
+background: #244b91;
+color: white;
+border: none;
+border-radius: 8px;
+padding: 11px 16px;
+cursor: pointer;
+text-decoration: none;
+font-weight: bold;
+font-size: 14px;
+}
+.btn:hover, button:hover {
+background: #17356c;
+}
+/* SKILLS /
+.skills-list {
+display: flex;
+flex-wrap: wrap;
+gap: 10px;
+}
+.skills-list span {
+background: #eaf0ff;
+color: #244b91;
+padding: 9px 14px;
+border-radius: 30px;
+font-weight: bold;
+font-size: 13px;
+}
+/* CAPACITI SECTION /
+#certifications {
+background: linear-gradient(135deg, #101b38, #263e75);
+color: white;
+padding: 35px;
+}
+#certifications h2 {
+color: white;
+}
+.capaciti-card {
+background: rgba(255,255,255,0.08);
+border: 1px solid rgba(255,255,255,0.18);
+border-radius: 18px;
+padding: 28px;
+}
+.capaciti-label {
+color: #c4b5fd;
+font-size: 12px;
+font-weight: bold;
+letter-spacing: 1.5px;
+text-transform: uppercase;
+}
+.capaciti-card h3 {
+color: white;
+font-size: 25px;
+margin-bottom: 10px;
+}
+.capaciti-description {
+color: #dbe4f5;
+}
+.capaciti-skills {
+display: flex;
+flex-wrap: wrap;
+gap: 10px;
+margin: 20px 0;
+}
+.capaciti-skills span {
+background: rgba(167,139,250,0.18);
+color: #ede9fe;
+border: 1px solid #7565ad;
+padding: 8px 14px;
+border-radius: 25px;
+font-size: 13px;
+}
+.capaciti-certificate {
+background: rgba(0,0,0,0.2);
+border-radius: 14px;
+padding: 22px;
+margin: 24px 0;
+}
+.capaciti-certificate h4 {
+margin-top: 0;
+color: white;
+}
+.capaciti-button {
+display: inline-block;
+background: #a78bfa;
+color: #101b38;
+padding: 12px 20px;
+border-radius: 9px;
+text-decoration: none;
+font-weight: bold;
+margin-top: 10px;
+}
+.capaciti-button:hover {
+background: #ddd6fe;
+}
+/* PROJECT CARDS /
+.projects {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+gap: 18px;
+}
+.project-card {
+background: #f4f6fc;
+padding: 22px;
+border-radius: 13px;
+border: 1px solid #e0e6f1;
+}
+.project-card h3 {
+color: #244b91;
+margin-top: 0;
+}
+.project-card a {
+color: #244b91;
+font-weight: bold;
+}
+/* AGILE PORTFOLIO TABLE /
+.table-wrapper {
+overflow-x: auto;
+}
+table {
+width: 100%;
+border-collapse: collapse;
+margin-top: 20px;
+}
+th, td {
+border: 1px solid #dce2ec;
+padding: 14px;
+text-align: left;
+}
+th {
+background: #244b91;
+color: white;
+}
+tr:nth-child(even) {
+background: #f3f6fc;
+}
+iframe {
+width: 100%;
+height: 650px;
+border: 1px solid #dce2ec;
+border-radius: 9px;
+background: white;
+}
+#viewer[hidden] {
+display: none;
+}
+footer {
+background: #101b34;
+color: white;
+text-align: center;
+padding: 25px;
+}
+@media (max-width: 600px) {
+header h1 {
+font-size: 29px;
+}
+section, #certifications {
+padding: 20px;
+}
+.capaciti-card {
+padding: 18px;
+}
+.capaciti-card h3 {
+font-size: 21px;
+}
+th, td {
+padding: 9px;
+font-size: 13px;
+}
+iframe {
+height: 450px;
+}
+}
+</style>
+</head>
+<body>
+<!-- HOME -->
+<header id="home">
+<img
+src="images/profile.jpg"
+alt="Tlangelani Chauke profile picture"
+class="profile"
+onerror="this.style.display='none'"
+>
+<h1>Tlangelani Chauke</h1>
+<p>ICT Application Development Student</p>
+<p>Cape Peninsula University of Technology</p>
+<p>Aspiring Software Developer</p>
+</header>
+<!-- NAVIGATION -->
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About Me</a>
+<a href="#skills">Skills</a>
+<a href="#certifications">Certifications</a>
+<a href="#projects">IT Projects</a>
+<a href="#agile">Agile Portfolio</a>
+<a href="#contact">Contact</a>
+</nav>
+<main>
+<!-- ABOUT ME -->
+<section id="about">
+<h2>About Me</h2>
+<p>
+I am a final-year Diploma in ICT student
+specialising in Application Development
+at Cape Peninsula University of Technology.
+I am passionate about software development,
+web applications and solving real-world
+problems through technology.
+I enjoy learning new technologies and
+building practical solutions that can
+make a positive difference.
+</p>
+<a
+href="TLANGELANI%20CHAUKE-CV.pdf"
+class="btn"
+target="_blank"
+rel="noopener"
+>
+View My CV
+</a>
+</section>
+<!-- TECHNICAL SKILLS -->
+<section id="skills">
+<h2>Technical Skills</h2>
+<div class="skills-list">
+<span>HTML</span>
+<span>CSS</span>
+<span>JavaScript</span>
+<span>Java</span>
+<span>Spring Boot</span>
+<span>PHP</span>
+<span>Laravel</span>
+<span>MySQL</span>
+<span>Git</span>
+<span>GitHub</span>
+<span>Figma</span>
+<span>Trello</span>
+</div>
+</section>
+<!-- CAPACITI PROFESSIONAL DEVELOPMENT -->
+<section id="certifications">
+<h2>🎓 Certifications & Professional Development</h2>
+<div class="capaciti-card">
+<p class="capaciti-label">
+Professional Development • July 2026
+</p>
+<h3>🚀 CAPACITI AI Skills Acceleration Programme</h3>
+<p class="capaciti-description">
+I successfully completed a one-week AI Skills
+Acceleration Programme through CAPACITI.
+The programme strengthened my understanding
+of artificial intelligence, generative AI,
+prompt engineering and responsible use
+of AI technologies.
+</p>
+<h4>Skills & Knowledge Gained</h4>
+<div class="capaciti-skills">
+<span>🤖 Artificial Intelligence</span>
+<span>✨ Generative AI</span>
+<span>💡 Prompt Engineering</span>
+<span>🛡️ Responsible AI</span>
+<span>💻 Digital Skills</span>
+<span>🧠 Problem Solving</span>
+</div>
+<div class="capaciti-certificate">
+<h4>🏆 Google AI Certificate</h4>
+<p>
+I completed a Google AI learning course
+during the CAPACITI programme,
+expanding my knowledge of AI tools
+and their practical applications.
+</p>
+<a
+href="certificates/google-ai-certificate.pdf"
+class="capaciti-button"
+target="_blank"
+rel="noopener"
+>
+📄 View My Certificate
+</a>
+</div>
+<h4>My Learning Reflection</h4>
+<p class="capaciti-description">
+Participating in the CAPACITI programme
+helped me understand how artificial
+intelligence can support productivity,
+learning and software development.
+It motivated me to continue developing
+my technical skills and exploring
+emerging technologies as an aspiring
+software developer.
+</p>
+</div>
+</section>
+<!-- IT PROJECTS -->
+<section id="projects">
+<h2>My IT Projects</h2>
+<div class="projects">
+<div class="project-card">
+<h3>iGugulam Community Program</h3>
+<p>
+Educational support website developed
+using HTML, CSS, JavaScript and
+Java Spring Boot.
+</p>
+<p>
+My contributions included the Dashboard,
+Homework, Announcements and Manage
+Announcements interfaces.
+</p>
+<a href="#agile">View Agile Portfolio</a>
+</div>
+<div class="project-card">
+<h3>Essence of the Middle East</h3>
+<p>
+E-commerce application developed using
+PHP and Laravel.
+</p>
+<p>
+My contribution focused on the
+Shopping Bag and Checkout subsystem.
+</p>
+</div>
+<div class="project-card">
+<h3>UniResApp</h3>
+<p>
+Student accommodation application.
+</p>
+<p>
+My contribution focused on the
+Maps and Navigation feature.
+</p>
+</div>
+<div class="project-card">
+<h3>CapeConnect AI</h3>
+<p>
+An IT project included in my
+application development experience.
+</p>
+</div>
+</div>
+</section>
+<!-- AGILE PROJECT PORTFOLIO -->
+<section id="agile">
+<h2>📚 PRP Agile Project Portfolio</h2>
+<p>
+<strong>Project:</strong>
+iGugulam Community Program
+</p>
+<p>
+This section contains my Agile project
+documentation, supporting evidence
+and individual reflections.
+</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr>
+<th>No.</th>
+<th>Agile Assessment Section</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Agile Project Charter</td>
+<td>
+<button onclick="showDocument('agile-project-charter.pdf', 'Agile Project Charter')">
+View Document
+</button>
+</td>
+</tr>
+<tr>
+<td>2</td>
+<td>User Stories and Tasks</td>
+<td>
+<button onclick="showDocument('user-stories-and-tasks.pdf', 'User Stories and Tasks')">
+View Document
+</button>
+</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Product Backlog</td>
+<td>
+<button onclick="showDocument('product-backlog.pdf', 'Product Backlog')">
+View Document
+</button>
+</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Sprint Backlog</td>
+<td>
+<button onclick="showDocument('sprint-backlog.pdf', 'Sprint Backlog')">
+View Document
+</button>
+</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Agile Logbook</td>
+<td>
+<button onclick="showDocument('agile-logbook.pdf', 'Agile Logbook')">
+View Document
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- DOCUMENT VIEWER -->
+<section id="viewer" hidden>
+<h2 id="document-title">Document Viewer</h2>
+<p>
+<button onclick="closeDocument()">
+← Back to Agile Portfolio
+</button>
+</p>
+<iframe
+id="document-frame"
+title="Agile portfolio document"
+></iframe>
+</section>
+<!-- CONTACT -->
+<section id="contact">
+<h2>Contact & Professional Links</h2>
+<p>
+<a
+href="https://github.com/Tlangelani23"
+target="_blank"
+rel="noopener"
+>
+Visit My GitHub Profile
+</a>
+</p>
+</section>
+</main>
+<footer>
+<p>
+&copy; 2026 Tlangelani Chauke |
+IT Portfolio
+</p>
+</footer>
+<script>
+function showDocument(filename, title) {
+document.getElementById("document-title")
+.textContent = title;
+document.getElementById("document-frame")
+.src = "documents/" + filename;
+document.getElementById("viewer")
+.hidden = false;
+document.getElementById("viewer")
+.scrollIntoView({ behavior: "smooth" });
+}
+function closeDocument() {
+document.getElementById("viewer")
+.hidden = true;
+document.getElementById("document-frame")
+.src = "";
+document.getElementById("agile")
+.scrollIntoView({ behavior: "smooth" });
+}
+</script>
+</body>
+</html>
