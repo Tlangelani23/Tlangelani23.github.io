@@ -1,181 +1,707 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Tlangelani Chauke's ICT Application Development and Agile Portfolio of Evidence.">
-  <title>Tlangelani Chauke | Digital Portfolio</title>
-  <style>
-    :root { --navy:#142a4b; --navy2:#203c69; --blue:#286fdb; --blue-dark:#1754ad; --paper:#f4f7fc; --white:#fff; --ink:#233148; --muted:#62718b; --border:#dce4f0; --shadow:0 12px 30px rgba(20,42,75,.08); }
-    * { box-sizing:border-box; }
-    html { scroll-behavior:smooth; }
-    body { margin:0; font-family:Arial,Helvetica,sans-serif; line-height:1.65; color:var(--ink); background:var(--paper); }
-    a { color:var(--blue-dark); }
-    a:focus-visible, button:focus-visible { outline:3px solid #f4b63f; outline-offset:3px; }
-    .container { max-width:1120px; margin:0 auto; padding:0 22px; }
-    .site-header { background:var(--navy); color:white; position:sticky; top:0; z-index:20; box-shadow:0 2px 12px rgba(0,0,0,.12); }
-    .nav-wrap { display:flex; justify-content:space-between; align-items:center; gap:18px; min-height:76px; flex-wrap:wrap; padding-top:12px; padding-bottom:12px; }
-    .brand { color:white; text-decoration:none; font-size:1.1rem; font-weight:800; letter-spacing:.3px; }
-    nav { display:flex; flex-wrap:wrap; gap:8px 18px; }
-    nav a { color:#f0f5ff; text-decoration:none; font-weight:600; font-size:.94rem; }
-    nav a:hover { text-decoration:underline; }
-    .hero { color:white; background:linear-gradient(135deg,#132746,#254e87 72%,#3869ab); padding:96px 0 92px; }
-    .hero .eyebrow { text-transform:uppercase; letter-spacing:2px; font-weight:700; color:#c6ddff; font-size:.85rem; }
-    .hero h1 { font-size:clamp(2.25rem,5vw,4.2rem); line-height:1.15; margin:14px 0 18px; }
-    .hero p { max-width:720px; font-size:1.13rem; color:#e3edfb; }
-    .actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:28px; }
-    .btn { display:inline-block; padding:12px 22px; border-radius:9px; font-weight:700; text-decoration:none; transition:background .2s,transform .2s; }
-    .btn:hover { transform:translateY(-1px); }
-    .btn-primary { background:#fff; color:#17345c; }
-    .btn-outline { border:1px solid #c6dcff; color:#fff; }
-    section { padding:66px 0; scroll-margin-top:95px; }
-    h2 { font-size:clamp(1.7rem,3vw,2.25rem); line-height:1.25; color:var(--navy2); margin:0 0 14px; }
-    .section-intro { color:var(--muted); max-width:800px; margin:0 0 26px; }
-    .panel { background:var(--white); padding:30px; border:1px solid var(--border); border-radius:18px; box-shadow:var(--shadow); }
-    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; }
-    .card { background:white; border:1px solid var(--border); border-radius:16px; padding:24px; box-shadow:var(--shadow); }
-    .card h3 { margin:0 0 10px; color:var(--navy2); }
-    .card p { margin:0 0 16px; color:#4f6079; }
-    .tag-list { display:flex; flex-wrap:wrap; gap:10px; }
-    .tag { padding:9px 14px; background:#e9f1ff; color:#173d77; border-radius:999px; font-weight:600; font-size:.92rem; }
-    .project-link { font-weight:700; }
-    .agile-table-wrap { width:100%; overflow-x:auto; border:1px solid var(--border); border-radius:13px; }
-    .agile-table { width:100%; border-collapse:collapse; background:white; min-width:530px; }
-    .agile-table th { background:var(--navy2); color:white; text-align:left; padding:17px 20px; }
-    .agile-table td { padding:17px 20px; border-top:1px solid var(--border); }
-    .agile-table tbody tr:nth-child(even) { background:#f2f6fc; }
-    .agile-table td:first-child { font-weight:700; color:var(--muted); width:80px; }
-    .agile-table td:last-child { width:135px; }
-    .view-btn { display:inline-block; padding:9px 24px; color:white; background:var(--blue); border-radius:9px; font-weight:700; text-decoration:none; }
-    .view-btn:hover { background:var(--blue-dark); }
-    .note { margin:18px 0 0; color:var(--muted); font-size:.95rem; }
-    .contact-links { display:flex; gap:12px; flex-wrap:wrap; }
-    .contact-links a { display:inline-block; padding:10px 17px; border:1px solid var(--border); border-radius:8px; text-decoration:none; font-weight:700; }
-    footer { padding:26px 0; background:var(--navy); color:#dce8f9; text-align:center; }
-    @media (max-width:640px) { .nav-wrap { align-items:flex-start; } nav { gap:8px 13px; } .hero { padding:66px 0; } section { padding:48px 0; } .panel { padding:20px; } }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tlangelani Chauke | IT Portfolio</title>
+<style>
+:root {
+--navy: #0c1733;
+--blue: #2563eb;
+--purple: #8057e7;
+--light: #f3f6ff;
+--text: #23304b;
+}
+{
+box-sizing: border-box;
+}
+html {
+scroll-behavior: smooth;
+}
+body {
+margin: 0;
+font-family: "Segoe UI", Arial, sans-serif;
+background: var(--light);
+color: var(--text);
+line-height: 1.7;
+}
+header {
+background: linear-gradient(
+120deg, #0c1733, #204b9c, #6847ad
+);
+color: white;
+text-align: center;
+padding: 85px 20px 75px;
+}
+.profile {
+width: 145px;
+height: 145px;
+border-radius: 50%;
+object-fit: cover;
+border: 5px solid white;
+box-shadow: 0 12px 35px #0005;
+}
+.eyebrow {
+color: #d6c6ff;
+text-transform: uppercase;
+letter-spacing: 3px;
+font-size: 12px;
+font-weight: 700;
+}
+header h1 {
+font-size: clamp(34px, 5vw, 55px);
+margin: 10px 0;
+}
+header p {
+margin: 6px;
+}
+.hero-actions {
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+gap: 12px;
+margin-top: 26px;
+}
+.btn, button {
+display: inline-block;
+background: var(--blue);
+color: white;
+border: 0;
+border-radius: 10px;
+padding: 12px 19px;
+font: inherit;
+font-size: 14px;
+font-weight: 700;
+text-decoration: none;
+cursor: pointer;
+transition: .2s ease;
+}
+.btn:hover, button:hover {
+background: #1747b3;
+transform: translateY(-2px);
+}
+.btn-light {
+background: white;
+color: #17366c;
+}
+.btn-light:hover {
+background: #e8eeff;
+}
+nav {
+position: sticky;
+top: 0;
+z-index: 20;
+background: #0c1733;
+text-align: center;
+padding: 14px 8px;
+box-shadow: 0 4px 15px #0002;
+}
+nav a {
+color: #eef3ff;
+text-decoration: none;
+font-weight: 600;
+font-size: 13px;
+display: inline-block;
+margin: 5px 9px;
+}
+nav a:hover {
+color: #c5aaff;
+}
+main {
+max-width: 1100px;
+margin: auto;
+padding: 18px;
+}
+section {
+background: white;
+margin: 30px 0;
+padding: 35px;
+border-radius: 20px;
+box-shadow: 0 8px 30px #172a5410;
+scroll-margin-top: 95px;
+}
+h2 {
+color: #173c86;
+font-size: 28px;
+margin-top: 0;
+}
+.skills {
+display: flex;
+flex-wrap: wrap;
+gap: 10px;
+}
+.skills span {
+background: #e8efff;
+color: #2450a0;
+padding: 9px 15px;
+border-radius: 30px;
+font-size: 13px;
+font-weight: 700;
+}
+/* CAPACITI /
+#capaciti {
+background: linear-gradient(
+130deg, #111d3e, #253e78
+);
+color: white;
+}
+#capaciti h2 {
+color: white;
+}
+.capaciti-card {
+border: 1px solid #ffffff35;
+background: #ffffff10;
+border-radius: 17px;
+padding: 26px;
+}
+.capaciti-card h3 {
+color: #e2d5ff;
+font-size: 25px;
+}
+.capaciti-card p {
+color: #e1e9ff;
+}
+.capaciti-tags {
+display: flex;
+flex-wrap: wrap;
+gap: 10px;
+}
+.capaciti-tags span {
+background: #7355c044;
+border: 1px solid #a58bff77;
+border-radius: 30px;
+padding: 8px 13px;
+font-size: 13px;
+color: #f0eaff;
+}
+/* PROJECTS /
+.project-grid {
+display: grid;
+grid-template-columns: repeat(
+auto-fit, minmax(225px, 1fr)
+);
+gap: 18px;
+}
+.project-card {
+background: linear-gradient(
+135deg, #1748a5, #346fe2
+);
+border-radius: 16px;
+padding: 25px;
+color: white;
+min-height: 195px;
+cursor: pointer;
+transition: .25s ease;
+border: 1px solid #ffffff20;
+text-align: left;
+}
+.project-card:hover {
+transform: translateY(-6px);
+box-shadow: 0 14px 25px #1b49a344;
+}
+.project-card h3 {
+margin: 10px 0;
+font-size: 19px;
+color: white;
+}
+.project-card p {
+color: #e2edff;
+font-size: 13px;
+}
+.project-card .arrow {
+display: inline-block;
+margin-top: 10px;
+font-weight: 700;
+color: white;
+}
+/* AGILE TABLE /
+.table-wrap {
+overflow-x: auto;
+}
+table {
+width: 100%;
+border-collapse: collapse;
+margin-top: 22px;
+}
+th {
+background: #173c86;
+color: white;
+padding: 15px;
+text-align: left;
+}
+td {
+padding: 15px;
+border-bottom: 1px solid #e2e8f5;
+}
+tr:nth-child(even) {
+background: #f1f5ff;
+}
+.doc-btn {
+background: #2563eb;
+white-space: nowrap;
+}
+#document-viewer[hidden],
+#project-details[hidden] {
+display: none;
+}
+#document-frame {
+width: 100%;
+height: 650px;
+border: 1px solid #d7e0f0;
+border-radius: 12px;
+margin-top: 20px;
+}
+.detail-panel {
+background: #edf3ff;
+border-left: 5px solid #2563eb;
+padding: 20px;
+border-radius: 12px;
+margin-top: 20px;
+}
+/* CONTACT /
+.contact-grid {
+display: grid;
+grid-template-columns: repeat(
+auto-fit, minmax(200px, 1fr)
+);
+gap: 15px;
+}
+.contact-link {
+display: block;
+background: #2058c2;
+color: white;
+padding: 25px;
+text-align: center;
+border-radius: 14px;
+text-decoration: none;
+font-size: 18px;
+font-weight: bold;
+transition: .2s;
+}
+.contact-link:hover {
+background: #123b8a;
+transform: translateY(-3px);
+}
+.contact-link.github {
+background: #17223c;
+}
+.contact-link.github:hover {
+background: #33456e;
+}
+.contact-link.pending {
+background: #dbe5f8;
+color: #34496c;
+cursor: default;
+}
+footer {
+background: #0c1733;
+color: #d5e0f8;
+text-align: center;
+padding: 28px;
+}
+@media (max-width: 600px) {
+header {
+padding: 60px 15px;
+}
+section {
+padding: 22px;
+}
+.capaciti-card {
+padding: 18px;
+}
+td, th {
+padding: 10px;
+font-size: 13px;
+}
+#document-frame {
+height: 470px;
+}
+}
+</style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="brand" href="#home">Tlangelani Chauke</a>
-      <nav aria-label="Main navigation">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#capaciti">CAPACITI</a>
-        <a href="#projects">Projects</a>
-        <a href="#agile">Agile Portfolio</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <section id="home" class="hero">
-      <div class="container">
-        <div class="eyebrow">ICT • Application Development • Agile</div>
-        <h1>Hello, I'm Tlangelani Chauke.</h1>
-        <p>Welcome to my digital portfolio. I am a final-year Diploma in ICT (Application Development) student at Cape Peninsula University of Technology, building practical skills in software development, teamwork and Agile project delivery.</p>
-        <div class="actions">
-          <a class="btn btn-primary" href="#agile">Explore Agile Portfolio</a>
-          <a class="btn btn-outline" href="TLANGELANI CHAUKE-CV.pdf" target="_blank" rel="noopener noreferrer">View My CV</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="about">
-      <div class="container">
-        <h2>About Me</h2>
-        <div class="panel">
-          <p>I am an ICT student specialising in Application Development at CPUT. I enjoy developing useful web applications, learning new technologies and collaborating with teams to solve practical problems.</p>
-          <p>My academic projects have involved frontend interfaces, backend development, databases, version control and Agile task management. I am interested in opportunities that help me grow as a software developer.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="skills">
-      <div class="container">
-        <h2>Technical Skills</h2>
-        <p class="section-intro">Technologies and tools I have worked with during my studies and projects.</p>
-        <div class="panel tag-list">
-          <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">PHP</span><span class="tag">Laravel</span><span class="tag">MySQL</span><span class="tag">Git &amp; GitHub</span><span class="tag">Trello</span><span class="tag">Figma</span><span class="tag">IntelliJ IDEA</span><span class="tag">VS Code</span>
-        </div>
-      </div>
-    </section>
-
-    <section id="capaciti">
-      <div class="container">
-        <h2>CAPACITI &amp; Professional Development</h2>
-        <div class="grid">
-          <article class="card"><h3>CAPACITI AI Skills Acceleration Programme</h3><p>Participated in an AI skills development programme focused on building awareness of artificial intelligence and practical digital skills.</p></article>
-          <article class="card"><h3>Google AI Learning</h3><p>Completed Google AI learning during the programme and explored ways AI tools can support productivity and learning.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects">
-      <div class="container">
-        <h2>Academic Projects</h2>
-        <p class="section-intro">Selected projects and the areas I contributed to.</p>
-        <div class="grid">
-          <article class="card">
-            <h3>iGugulam Community Programme</h3>
-            <p>An educational support website. My work included Dashboard, Announcements, Homework and Manage Announcements pages, as well as participation in backend activities and Agile coordination.</p>
-            <a class="project-link" href="https://github.com/Tlangelani23/Wil-Project--IGugulam-Community-Program" target="_blank" rel="noopener noreferrer">View project repository</a>
-          </article>
-          <article class="card">
-            <h3>Essence of the Middle East</h3>
-            <p>An e-commerce website built with Laravel and PHP. I worked on the Shopping Bag and Checkout subsystem.</p>
-            <a class="project-link" href="https://github.com/Tlangelani23/EssenceWebsite" target="_blank" rel="noopener noreferrer">View project repository</a>
-          </article>
-          <article class="card">
-            <h3>UniResApp</h3>
-            <p>A student accommodation application project. My allocated feature focused on maps and navigation.</p>
-          </article>
-          <article class="card">
-            <h3>CapeConnect AI</h3>
-            <p>An academic project included in my development experience.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="agile">
-      <div class="container">
-        <h2>Agile Portfolio of Evidence</h2>
-        <p class="section-intro">iGugulam Community Programme — five assessment documents covering Agile planning, task management, evidence and personal reflections.</p>
-        <div class="panel">
-          <div class="agile-table-wrap">
-            <table class="agile-table">
-              <thead><tr><th scope="col">No.</th><th scope="col">Agile Document</th><th scope="col">Action</th></tr></thead>
-              <tbody>
-                <tr><td>01</td><td>Agile Team Charter</td><td><a class="view-btn" href="documents/Agile%20Team%20Charter.pdf" target="_blank" rel="noopener noreferrer" aria-label="View Agile Team Charter PDF in a new tab">View</a></td></tr>
-                <tr><td>02</td><td>User Stories and Tasks</td><td><a class="view-btn" href="documents/User%20Stories%20and%20Tasks.pdf" target="_blank" rel="noopener noreferrer" aria-label="View User Stories and Tasks PDF in a new tab">View</a></td></tr>
-                <tr><td>03</td><td>Product Backlog</td><td><a class="view-btn" href="documents/Product%20Backlog.pdf" target="_blank" rel="noopener noreferrer" aria-label="View Product Backlog PDF in a new tab">View</a></td></tr>
-                <tr><td>04</td><td>Sprint Backlog</td><td><a class="view-btn" href="documents/Sprint%20Backlog.pdf" target="_blank" rel="noopener noreferrer" aria-label="View Sprint Backlog PDF in a new tab">View</a></td></tr>
-                <tr><td>05</td><td>Agile Logbook</td><td><a class="view-btn" href="documents/Agile%20Logbook.pdf" target="_blank" rel="noopener noreferrer" aria-label="View Agile Logbook PDF in a new tab">View</a></td></tr>
-              </tbody>
-            </table>
-          </div>
-          <p class="note">Select <strong>View</strong> to open the PDF in a new browser tab. Use your browser's PDF viewer to zoom or enter full-screen mode. The documents remain stored in the <code>documents</code> folder.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="container">
-        <h2>Contact &amp; Links</h2>
-        <p class="section-intro">Explore my code and portfolio materials.</p>
-        <div class="panel contact-links">
-          <a href="https://github.com/Tlangelani23" target="_blank" rel="noopener noreferrer">GitHub Profile</a>
-          <a href="TLANGELANI CHAUKE-CV.pdf" target="_blank" rel="noopener noreferrer">My CV</a>
-          <a href="Mock-Interview%20Video.mp4" target="_blank" rel="noopener noreferrer">Mock Interview Video</a>
-        </div>
-      </div>
-    </section>
-  </main>
-  <footer><div class="container">&copy; 2026 Tlangelani Chauke. Digital Portfolio.</div></footer>
+<header id="home">
+<img
+src="images/profile.jpg"
+class="profile"
+alt="Profile photo"
+onerror="this.style.display='none'"
+>
+<p class="eyebrow">
+Welcome to my digital portfolio
+</p>
+<h1>Tlangelani Chauke</h1>
+<p>ICT Application Development Student</p>
+<p>Cape Peninsula University of Technology</p>
+<p>Aspiring Software Developer</p>
+<div class="hero-actions">
+<a href="#projects" class="btn btn-light">
+Explore My Projects
+</a>
+<a
+href="TLANGELANI%20CHAUKE-CV.pdf"
+class="btn"
+target="_blank"
+rel="noopener"
+>
+View My CV
+</a>
+</div>
+</header>
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#capaciti">CAPACITI</a>
+<a href="#projects">Projects</a>
+<a href="#agile">Agile Project</a>
+<a href="#contact">Contact</a>
+</nav>
+<main>
+<section id="about">
+<h2>About Me</h2>
+<p>
+I am a final-year Diploma in ICT student
+specialising in Application Development
+at Cape Peninsula University of Technology.
+</p>
+<p>
+I am passionate about building user-friendly
+web applications, solving real-world problems
+and continuously improving my technical skills.
+My academic projects have given me practical
+experience in frontend development,
+backend technologies and teamwork.
+</p>
+</section>
+<section id="skills">
+<h2>Technical Skills</h2>
+<div class="skills">
+<span>HTML</span>
+<span>CSS</span>
+<span>JavaScript</span>
+<span>Java</span>
+<span>Spring Boot</span>
+<span>PHP</span>
+<span>Laravel</span>
+<span>MySQL</span>
+<span>Git</span>
+<span>GitHub</span>
+<span>Figma</span>
+<span>Trello</span>
+</div>
+</section>
+<section id="capaciti">
+<h2>Professional Development</h2>
+<div class="capaciti-card">
+<p class="eyebrow">July 2026</p>
+<h3>
+🚀 CAPACITI AI Skills Acceleration Programme
+</h3>
+<p>
+I completed a one-week AI Skills Acceleration
+Programme through CAPACITI, where I developed
+my knowledge of artificial intelligence and
+its applications in the workplace.
+</p>
+<h4>Skills & Knowledge</h4>
+<div class="capaciti-tags">
+<span>Artificial Intelligence</span>
+<span>Generative AI</span>
+<span>Prompt Engineering</span>
+<span>Responsible AI</span>
+<span>Digital Skills</span>
+<span>Problem Solving</span>
+</div>
+<h4>Google AI Learning</h4>
+<p>
+During the programme, I also completed
+a Google AI learning course.
+</p>
+<h4>My Reflection</h4>
+<p>
+The experience strengthened my interest
+in emerging technologies and helped me
+understand how AI can support learning,
+productivity and software development.
+</p>
+</div>
+</section>
+<!-- PROJECTS -->
+<section id="projects">
+<h2>Projects</h2>
+<div class="project-grid">
+<button
+class="project-card"
+onclick="showProject('igugulam')"
+>
+<div>🎓</div>
+<h3>iGugulam Community Program</h3>
+<p>Educational support web application</p>
+<span class="arrow">View Project →</span>
+</button>
+<button
+class="project-card"
+onclick="showProject('essence')"
+>
+<div>🛍️</div>
+<h3>Essence of the Middle East</h3>
+<p>Laravel e-commerce application</p>
+<span class="arrow">View Project →</span>
+</button>
+<button
+class="project-card"
+onclick="showProject('unires')"
+>
+<div>📍</div>
+<h3>UniResApp</h3>
+<p>Student accommodation application</p>
+<span class="arrow">View Project →</span>
+</button>
+<button
+class="project-card"
+onclick="showProject('capeconnect')"
+>
+<div>💻</div>
+<h3>CapeConnect AI</h3>
+<p>Application development project</p>
+<span class="arrow">View Project →</span>
+</button>
+</div>
+<div
+id="project-details"
+class="detail-panel"
+hidden
+>
+<h3 id="project-title"></h3>
+<p id="project-description"></p>
+<button onclick="closeProject()">
+Close Project Details
+</button>
+</div>
+</section>
+<!-- AGILE PROJECT -->
+<section id="agile">
+<h2>Agile Project</h2>
+<p>
+<strong>Project:</strong>
+iGugulam Community Program
+</p>
+<p>
+This section contains my Agile project
+documentation, evidence and reflections.
+</p>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>No.</th>
+<th>Agile Document</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01</td>
+<td>Agile Project Charter</td>
+<td>
+<button
+class="doc-btn"
+onclick="showDocument(
+'Agile Team Charter.pdf',
+'Agile Project Charter'
+)"
+>
+View
+</button>
+</td>
+</tr>
+<tr>
+<td>02</td>
+<td>User Stories and Tasks</td>
+<td>
+<button
+class="doc-btn"
+onclick="showDocument(
+'User Stories and Tasks.pdf',
+'User Stories and Tasks'
+)"
+>
+View
+</button>
+</td>
+</tr>
+<tr>
+<td>03</td>
+<td>Product Backlog</td>
+<td>
+<button
+class="doc-btn"
+onclick="showDocument(
+'Product Backlog.pdf',
+'Product Backlog'
+)"
+>
+View
+</button>
+</td>
+</tr>
+<tr>
+<td>04</td>
+<td>Sprint Backlog</td>
+<td>
+<button
+class="doc-btn"
+onclick="showDocument(
+'Sprint Backlog.pdf',
+'Sprint Backlog'
+)"
+>
+View
+</button>
+</td>
+</tr>
+<tr>
+<td>05</td>
+<td>Agile Logbook</td>
+<td>
+<button
+class="doc-btn"
+onclick="showDocument(
+'Agile Logbook.pdf',
+'Agile Logbook'
+)"
+>
+View
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- DOCUMENT VIEWER -->
+<section id="document-viewer" hidden>
+<h2 id="document-title">
+Agile Document
+</h2>
+<button onclick="closeDocument()">
+← Back to Agile Project
+</button>
+<iframe
+id="document-frame"
+title="Agile document viewer"
+></iframe>
+</section>
+<!-- CONTACT -->
+<section id="contact">
+<h2>Contact & Professional Links</h2>
+<div class="contact-grid">
+<div class="contact-link pending">
+in · LinkedIn
+<div
+style="font-size:12px;font-weight:normal"
+>
+Profile link coming soon
+</div>
+</div>
+<a
+class="contact-link github"
+href="https://github.com/Tlangelani23"
+target="_blank"
+rel="noopener"
+>
+GitHub
+<div
+style="font-size:12px;font-weight:normal"
+>
+View My Repositories
+</div>
+</a>
+</div>
+</section>
+</main>
+<footer>
+© 2026 Tlangelani Chauke |
+Software Development Portfolio
+</footer>
+<script>
+const projects = {
+igugulam: {
+title: "iGugulam Community Program",
+description:
+"I worked on the Dashboard, Homework, " +
+"Announcements and Manage Announcements " +
+"interfaces using HTML, CSS and JavaScript. " +
+"I also contributed to Java Spring Boot " +
+"backend development activities."
+},
+essence: {
+title: "Essence of the Middle East",
+description:
+"An e-commerce project developed using " +
+"PHP and Laravel. My individual subsystem " +
+"focused on Shopping Bag and Checkout."
+},
+unires: {
+title: "UniResApp",
+description:
+"A student accommodation application. " +
+"My contribution focused on the Maps " +
+"and Navigation feature."
+},
+capeconnect: {
+title: "CapeConnect AI",
+description:
+"An application development project " +
+"included in my academic IT experience."
+}
+};
+function showProject(key) {
+const project = projects[key];
+if (!project) return;
+document.getElementById("project-title")
+.textContent = project.title;
+document.getElementById("project-description")
+.textContent = project.description;
+const panel =
+document.getElementById("project-details");
+panel.hidden = false;
+panel.scrollIntoView({
+behavior: "smooth"
+});
+}
+function closeProject() {
+document.getElementById("project-details")
+.hidden = true;
+document.getElementById("projects")
+.scrollIntoView({
+behavior: "smooth"
+});
+}
+function showDocument(filename, title) {
+document.getElementById("document-title")
+.textContent = title;
+document.getElementById("document-frame")
+.src = "documents/" + filename;
+const viewer =
+document.getElementById("document-viewer");
+viewer.hidden = false;
+viewer.scrollIntoView({
+behavior: "smooth"
+});
+}
+function closeDocument() {
+document.getElementById("document-viewer")
+.hidden = true;
+document.getElementById("document-frame")
+.src = "";
+document.getElementById("agile")
+.scrollIntoView({
+behavior: "smooth"
+});
+}
+</script>
 </body>
 </html>
 
