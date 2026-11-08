@@ -121,13 +121,15 @@ The portfolio demonstrates project planning, teamwork, Agile practices and perso
 
 ### Agile Documents
 
+
 | No. | Document | View |
 |---|---|---|
-| 1 | Agile Team Charter | [View](documents/Agile%20Team%20Charter.pdf) |
-| 2 | User Stories and Tasks | [View](documents/User%20Stories%20and%20Tasks.pdf) |
-| 3 | Product Backlog | [View](documents/Product%20Backlog.pdf) |
-| 4 | Sprint Backlog | [View](documents/Sprint%20Backlog.pdf) |
-| 5 | Agile Logbook | [View](documents/Agile%20Logbook.pdf) |
+| 1 | Agile Team Charter | [View](https://tlangelani23.github.io/documents/Agile%20Team%20Charter.pdf) |
+| 2 | User Stories and Tasks | [View](https://tlangelani23.github.io/documents/User%20Stories%20and%20Tasks.pdf) |
+| 3 | Product Backlog | [View](https://tlangelani23.github.io/documents/Product%20Backlog.pdf) |
+| 4 | Sprint Backlog | [View](https://tlangelani23.github.io/documents/Sprint%20Backlog.pdf) |
+| 5 | Agile Logbook | [View](https://tlangelani23.github.io/documents/Agile%20Logbook.pdf) |
+
 
 These documents contain evidence of Agile activities, project contributions and reflections.
 
